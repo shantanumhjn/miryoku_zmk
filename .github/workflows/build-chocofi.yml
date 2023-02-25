@@ -1,0 +1,14 @@
+name: 'Build my chocofi keymap'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["corne_left","corne_right"]'
+      alphas: '["Colemak"]'
+      clipboard: '["Mac"]'
+      custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
+      kconfig: '["CONFIG_ZMK_SLEEP=y\n"]' # zmk sleep will put keyboard into deep sleep in 15 minutes
+      branches: '["zmkfirmware/zmk/main shantanumhjn/zmk/shantanumhjn/renameCorneToChocofi"]'
