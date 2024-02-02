@@ -20,7 +20,7 @@
       label = STRING; \
       bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER) >; \
 
-      #if defined MIRYOKU_KEYBOARD_CORNY
+      #if defined (MIRYOKU_KEYBOARD_CORNY)
       sensor-bindings = < \
         &inc_dec_kp C_VOL_UP C_VOL_DN \
         &inc_dec_kp PAGE_UP PAGE_DOWN \
