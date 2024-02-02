@@ -15,21 +15,27 @@
 / {
   keymap {
     compatible = "zmk,keymap";
+#if defined (MIRYOKU_KEYBOARD_CORNY)
 #define MIRYOKU_X(LAYER, STRING) \
     LAYER { \
       label = STRING; \
       bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER) >; \
-
-      #if defined (MIRYOKU_KEYBOARD_CORNY)
       sensor-bindings = < \
         &inc_dec_kp C_VOL_UP C_VOL_DN \
         &inc_dec_kp PAGE_UP PAGE_DOWN \
       >; \
-      #endif
-
     };
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
+#else
+#define MIRYOKU_X(LAYER, STRING) \
+    LAYER { \
+      label = STRING; \
+      bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER) >; \
+    };
+MIRYOKU_LAYER_LIST
+#undef MIRYOKU_X
+#endif // MIRYOKU_KEYBOARD_CORNY
   };
 };
 
