@@ -2,5 +2,5 @@
 
 outboard_repository=shantanumhjn/corne-xiao
 outboard_ref=main
-outboard_from=rev2/firmware/5-col/zmk-config/config/boards/shields/corny
+outboard_from=rev2/firmware/5-col/zmk-config
 outboard_to=boards/shields/corny
