@@ -6,7 +6,7 @@ jobs:
     secrets: inherit
     with:
       board: '["seeeduino_xiao_ble"]'
-      shield: '["corny_left rgbled_adapter","corny_right rgbled_adapter"]'
+      shield: '["corny_left","corny_right"]'
       alphas: '["Colemak"]'
       clipboard: '["Mac"]'
       custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
