@@ -1,6 +1,5 @@
 name: 'Build my corny keymap'
 on:
-  workflow_dispatch
   push:
     branches:
       develop
