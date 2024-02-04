@@ -1,0 +1,14 @@
+name: 'Build my chocofi keymap'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["seeeduino_xiao_ble"]'
+      shield: '["corny_left rgbled_adapter","corny_right rgbled_adapter"]'
+      alphas: '["Colemak"]'
+      clipboard: '["Mac"]'
+      custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
+      kconfig: '["CONFIG_ZMK_SLEEP=y\nCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=600000\nCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y\nCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y"]' # zmk sleep will put keyboard into deep sleep in 15 minutes, setting this to 10 minutes
+      branches: '["zmkfirmware/zmk/main"]'
