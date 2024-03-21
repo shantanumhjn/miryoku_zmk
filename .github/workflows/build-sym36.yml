@@ -1,0 +1,14 @@
+name: 'Build my corny keymap'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["sym36"]'
+      alphas: '["Colemak"]'
+      clipboard: '["Mac"]'
+      custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
+      kconfig: '["CONFIG_ZMK_SLEEP=y\nCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=600000"]' # zmk sleep will put keyboard into deep sleep in 15 minutes, setting this to 10 minutes
+      branches: '["zmkfirmware/zmk/main"]'
