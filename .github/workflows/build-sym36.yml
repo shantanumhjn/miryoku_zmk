@@ -1,4 +1,4 @@
-name: 'Build my corny keymap'
+name: 'Build my sym36 keymap'
 on: workflow_dispatch
 jobs:
   build:
