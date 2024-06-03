@@ -1,0 +1,13 @@
+name: 'Build my wired sym36 keymap'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["sparkfun_pro_micro_rp2040"]'
+      shield: '["sym36"]'
+      alphas: '["Colemak"]'
+      clipboard: '["Mac"]'
+      custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
+      branches: '["zmkfirmware/zmk/main"]'
