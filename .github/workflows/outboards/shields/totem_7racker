@@ -1,0 +1,6 @@
+# Copyright 2024 Shantanu Mahajan
+
+outboard_repository=shantanumhjn/zmk-config
+outboard_ref=main
+outboard_from=totem-7racker-dongle/config/boards/shields/totem_7racker
+outboard_to=boards/shields/totem_7racker

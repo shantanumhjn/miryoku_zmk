@@ -1,0 +1,5 @@
+// Copyright 2024 Shantanu Mahajan
+
+#include "../miryoku/custom_config.h"
+#include "../miryoku/mapping/38/totem.h"
+#include "../miryoku/miryoku.dtsi"

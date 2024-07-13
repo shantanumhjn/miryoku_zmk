@@ -1,0 +1,14 @@
+name: 'Build my totem 7racker keymap'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["seeeduino_xiao_ble"]'
+      shield: '["totem_7racker_dongle","totem_7racker_left","totem_7racker_right"]'
+      alphas: '["Colemak"]'
+      clipboard: '["Mac"]'
+      custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
+      kconfig: '["CONFIG_ZMK_SLEEP=y\nCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=600000"]' # zmk sleep will put keyboard into deep sleep in 15 minutes, setting this to 10 minutes
+      branches: '["zmkfirmware/zmk/main"]'
