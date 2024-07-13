@@ -6,7 +6,7 @@ jobs:
     secrets: inherit
     with:
       board: '["seeeduino_xiao_ble"]'
-      shield: '["totem_7racker_dongle","totem_7racker_left","totem_7racker_right"]'
+      shield: '["totem_7racker_left","totem_7racker_right"]' # add "totem_7racker_dongle" to list for dongle version
       alphas: '["Colemak"]'
       clipboard: '["Mac"]'
       custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
