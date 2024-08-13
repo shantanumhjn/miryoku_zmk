@@ -1,6 +1,6 @@
 # corny
 
-outboard_repository=shantanumhjn/zmk-config-sym36
+outboard_repository=shantanumhjn/my-zmk-config
 outboard_ref=main
-outboard_from=config/boards/shields/sym36
+outboard_from=boards/shields/sym36
 outboard_to=boards/shields/sym36
