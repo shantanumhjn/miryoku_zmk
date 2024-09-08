@@ -1,0 +1,17 @@
+name: 'Build my cygnus keymap'
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      master
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["cygnus_left","cygnus_right"]'
+      alphas: '["Colemak"]'
+      clipboard: '["Mac"]'
+      custom_config: '["#define MIRYOKU_TAP_QWERTY"]'
+      branches: '["zmkfirmware/zmk/main"]'

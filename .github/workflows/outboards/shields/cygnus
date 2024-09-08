@@ -1,0 +1,6 @@
+# Copyright 2024 Shantanu Mahajan
+
+outboard_repository=shantanumhjn/my-zmk-config
+outboard_ref=main
+outboard_from=boards/shields/cygnus
+outboard_to=boards/shields/cygnus
